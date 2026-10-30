@@ -17,7 +17,17 @@ export default function QuickAccessPage() {
     <div className="min-h-screen bg-background flex">
       <Sidebar />
       <main className="flex-1 lg:ml-64">
-        <div className="max-w-5xl mx-auto px-6 py-10">
+        {/* Header image */}
+        <div className="relative h-28 sm:h-36 overflow-hidden">
+          <img
+            src="/field-green.jpg"
+            alt="Green farmland"
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-10 -mt-10 relative">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}

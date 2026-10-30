@@ -403,7 +403,17 @@ export default function PathwayPage() {
       <Sidebar />
 
       <main className="flex-1 lg:ml-64">
-        <div className="max-w-3xl mx-auto px-6 py-10">
+        {/* Header image */}
+        <div className="relative h-32 sm:h-40 overflow-hidden">
+          <img
+            src="/barn-rural.jpg"
+            alt="Rural farm landscape"
+            className="w-full h-full object-cover opacity-50"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+        </div>
+
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-10 -mt-12 relative">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
