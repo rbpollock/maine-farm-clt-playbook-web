@@ -85,7 +85,7 @@ export default function Home() {
             className="mt-10 sm:mt-14 grid grid-cols-2 sm:flex sm:gap-8 gap-4 text-sm"
           >
             <div className="bg-card/50 backdrop-blur-sm rounded-xl p-3 border border-border/40">
-              <div className="font-semibold text-foreground text-lg">15</div>
+              <div className="font-semibold text-foreground text-lg">16</div>
               <div className="text-muted-foreground text-xs">playbook docs</div>
             </div>
             <div className="bg-card/50 backdrop-blur-sm rounded-xl p-3 border border-border/40">

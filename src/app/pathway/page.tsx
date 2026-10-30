@@ -49,7 +49,7 @@ const PHASE_SUBPATHS: Record<string, SubPath[]> = {
         "Do not skip this. Most failed transitions happen here — moving too fast before understanding what the model actually requires.",
         "Talk to at least two existing CLTs in Maine before forming opinions.",
       ],
-      docLink: { label: "Overview & Principles", id: "01-overview-and-principles" },
+      docLink: { label: "Maine CLT Deep Dive", id: "11-maine-clt-deep-dive" },
     },
     {
       id: "p1-committee",
