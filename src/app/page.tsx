@@ -36,8 +36,9 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-5"
           >
-            Farms<br />
-            <span className="gradient-text">stay owned.</span>
+            Farms and<br />
+            <span className="gradient-text">Community Land Trusts</span><br />
+            <span className="text-foreground">in Maine</span>
           </motion.h1>
 
           <motion.p
@@ -69,6 +70,24 @@ export default function Home() {
                 Browse Sections
               </div>
             </Link>
+          </motion.div>
+
+          {/* Video embed */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="mt-10 max-w-2xl"
+          >
+            <div className="rounded-xl overflow-hidden border border-border bg-card/30 aspect-video">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/CyBwnGedmaM"
+                title="Community Land Trusts in Maine"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </motion.div>
 
           {/* Quick stats row */}
