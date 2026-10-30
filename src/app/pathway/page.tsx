@@ -659,12 +659,10 @@ export default function PathwayPage() {
 
                             {/* Deep link */}
                             {sp.docLink && (
-                              <Link href={`/doc/${sp.docLink.id}`}>
-                                <div className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-accent transition-colors cursor-pointer">
-                                  <BookOpen className="w-3 h-3" />
-                                  Read the full {sp.docLink.label}
-                                  <ChevronRight className="w-3 h-3" />
-                                </div>
+                              <Link href={`/doc/${sp.docLink.id}`} className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-accent transition-colors">
+                                <BookOpen className="w-3 h-3" />
+                                Read the full {sp.docLink.label}
+                                <ChevronRight className="w-3 h-3" />
                               </Link>
                             )}
                           </div>

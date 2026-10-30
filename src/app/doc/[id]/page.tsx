@@ -90,30 +90,26 @@ export default function DocPage({ params }: DocPageProps) {
           {/* Navigation */}
           <div className="mt-12 pt-6 border-t border-border grid gap-4 sm:grid-cols-2">
             {prevDoc ? (
-              <Link href={`/doc/${prevDoc.id}`}>
-                <div className="group p-4 rounded-xl border border-border hover:border-primary/30 bg-card/50 hover:bg-card transition-all cursor-pointer">
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
-                    <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
-                    Previous
-                  </div>
-                  <div className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
-                    {prevDoc.label}
-                  </div>
+              <Link href={`/doc/${prevDoc.id}`} className="group block p-4 rounded-xl border border-border hover:border-primary/30 bg-card/50 hover:bg-card transition-all cursor-pointer">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
+                  <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
+                  Previous
+                </div>
+                <div className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
+                  {prevDoc.label}
                 </div>
               </Link>
             ) : (
               <div />
             )}
             {nextDoc ? (
-              <Link href={`/doc/${nextDoc.id}`}>
-                <div className="group p-4 rounded-xl border border-border hover:border-primary/30 bg-card/50 hover:bg-card transition-all cursor-pointer text-right">
-                  <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground mb-1">
-                    Next
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                  </div>
-                  <div className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
-                    {nextDoc.label}
-                  </div>
+              <Link href={`/doc/${nextDoc.id}`} className="group block p-4 rounded-xl border border-border hover:border-primary/30 bg-card/50 hover:bg-card transition-all cursor-pointer text-right">
+                <div className="flex items-center justify-end gap-2 text-xs text-muted-foreground mb-1">
+                  Next
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </div>
+                <div className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
+                  {nextDoc.label}
                 </div>
               </Link>
             ) : (

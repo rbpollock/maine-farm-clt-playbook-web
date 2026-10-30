@@ -31,17 +31,18 @@ export function Sidebar() {
   const isActive = (href: string) => pathname === href;
 
   const navItem = (href: string, label: string, IconComponent: React.ElementType) => (
-    <Link key={href} href={href} onClick={() => setMobileOpen(false)}>
-      <div
-        className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm transition-colors cursor-pointer ${
-          isActive(href)
-            ? "bg-primary/10 text-primary font-medium"
-            : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-        }`}
-      >
-        <IconComponent className="w-4 h-4" />
-        {label}
-      </div>
+    <Link
+      key={href}
+      href={href}
+      onClick={() => setMobileOpen(false)}
+      className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm transition-colors ${
+        isActive(href)
+          ? "bg-primary/10 text-primary font-medium"
+          : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+      }`}
+    >
+      <IconComponent className="w-4 h-4" />
+      {label}
     </Link>
   );
 
@@ -97,17 +98,14 @@ export function Sidebar() {
                   key={doc.id}
                   href={`/doc/${doc.id}`}
                   onClick={() => setMobileOpen(false)}
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors ${
+                    isActive(`/doc/${doc.id}`)
+                      ? "bg-primary/10 text-primary font-medium"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                  }`}
                 >
-                  <div
-                    className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors cursor-pointer ${
-                      isActive(`/doc/${doc.id}`)
-                        ? "bg-primary/10 text-primary font-medium"
-                        : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                    }`}
-                  >
-                    <BookOpen className="w-3.5 h-3.5 shrink-0" />
-                    <span className="truncate">{doc.label}</span>
-                  </div>
+                  <BookOpen className="w-3.5 h-3.5 shrink-0" />
+                  <span className="truncate">{doc.label}</span>
                 </Link>
               ))}
             </motion.div>
@@ -141,17 +139,14 @@ export function Sidebar() {
                     key={tpl.id}
                     href={`/doc/${tpl.id}`}
                     onClick={() => setMobileOpen(false)}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors ${
+                      isActive(`/doc/${tpl.id}`)
+                        ? "bg-primary/10 text-primary font-medium"
+                        : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                    }`}
                   >
-                    <div
-                      className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors cursor-pointer ${
-                        isActive(`/doc/${tpl.id}`)
-                          ? "bg-primary/10 text-primary font-medium"
-                          : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                      }`}
-                    >
-                      <ExternalLink className="w-3.5 h-3.5 shrink-0" />
-                      <span className="truncate">{tpl.label}</span>
-                    </div>
+                    <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                    <span className="truncate">{tpl.label}</span>
                   </Link>
                 ))}
               </motion.div>
