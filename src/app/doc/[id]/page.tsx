@@ -5,7 +5,7 @@ import { DOCS, TEMPLATES } from "@/content/docs";
 import { ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
 
 interface DocPageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export function generateStaticParams() {
@@ -14,8 +14,8 @@ export function generateStaticParams() {
   }));
 }
 
-export default function DocPage({ params }: DocPageProps) {
-  const { id } = params;
+export default async function DocPage({ params }: DocPageProps) {
+  const { id } = await params;
   const allDocs = [...DOCS, ...TEMPLATES];
   const doc = allDocs.find((d) => d.id === id);
   const currentIndex = allDocs.findIndex((d) => d.id === id);
